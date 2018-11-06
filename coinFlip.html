@@ -1,0 +1,41 @@
+<html>
+<head>
+  <style>
+    #krona, #klave {
+      width: 242px;
+      height: 250px;
+      background: url(1-krona.png) 0 0;
+    }
+    #klave {
+      background: url(1-krona.png) -258px 0;
+    }
+    li {
+      list-style-type: none;
+    }
+  </style>
+  <script>
+    const flip = Math.floor(Math.random() * 2);
+    document.addEventListener('DOMContentLoaded', function(){
+      if (flip == 0) {
+        var lista = document.getElementsByTagName('ul');
+        var listItem = document.createElement('li');
+        listItem.id = "krona";
+        lista[0].appendChild(listItem);
+      }
+      if (flip == 1) {
+        var lista = document.getElementsByTagName('ul');
+        var listItem = document.createElement('li');
+        listItem.id = "klave";
+        lista[0].appendChild(listItem);
+      }
+    });
+
+  </script>
+</head>
+<body>
+  <div id = "coin">
+    <ul>
+    </ul>
+  </div>
+</body>
+</html>
